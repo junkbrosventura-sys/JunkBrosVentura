@@ -94,6 +94,35 @@
       border-top-right-radius: 40px;
       margin-top: 4rem;
     }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      width: 100%;
+      padding: 0.8rem;
+      background: var(--secondary);
+      color: white;
+      font-weight: 700;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--card);
+      border-radius: 24px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+      text-align: left;
+    }
   </style>
 </head>
 <body>
@@ -144,55 +173,26 @@
   </div>
 </section>
 
-<section id="contact" style="text-align:center">
-  <h2>Contact Us</h2>
-  <p>Call or Email</p>
-  <p><strong>Phone:</strong> (805) 627-4009</p>
-  <p><strong>Email:</strong> junkbrosventura@gmail.com</p>
-</section>
-
-<section id="contact" style="text-align:center">
+<section id="contact">
   <h2>Get a Free Quote</h2>
   <p>Fill out the form below and we’ll get back to you quickly.</p>
 
-  <form action="mailto:junkbrosventura@gmail.com"
-        method="POST"
-        enctype="text/plain"
-        style="max-width:500px;margin:2rem auto;text-align:left;
-               background:white;padding:2rem;border-radius:24px;
-               box-shadow:0 12px 25px rgba(0,0,0,0.08)">
+  <form action="mailto:junkbrosventura@gmail.com" method="POST" enctype="text/plain">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="Name" required>
 
-    <label>Name</label><br />
-    <input type="text" name="Name" required
-           style="width:100%;padding:0.6rem;margin-bottom:1rem;
-                  border-radius:12px;border:1px solid #ccc" />
+    <label for="email">Email</label>
+    <input type="email" id="email" name="Email" required>
 
-    <label>Email</label><br />
-    <input type="email" name="Email" required
-           style="width:100%;padding:0.6rem;margin-bottom:1rem;
-                  border-radius:12px;border:1px solid #ccc" />
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" name="Phone">
 
-    <label>Phone Number</label><br />
-    <input type="text" name="Phone"
-           style="width:100%;padding:0.6rem;margin-bottom:1rem;
-                  border-radius:12px;border:1px solid #ccc" />
+    <label for="message">What do you need removed?</label>
+    <textarea id="message" name="Message" rows="4" required></textarea>
 
-    <label>What do you need removed?</label><br />
-    <textarea name="Message" rows="4" required
-              style="width:100%;padding:0.6rem;margin-bottom:1.5rem;
-                     border-radius:12px;border:1px solid #ccc"></textarea>
-
-    <button type="submit"
-            style="width:100%;padding:0.8rem;
-                   background:#22c55e;color:white;
-                   font-weight:700;border:none;
-                   border-radius:999px;cursor:pointer">
-      Send Request
-    </button>
-
+    <button type="submit">Send Request</button>
   </form>
 </section>
-  
 
 <footer>
   <p>© 2026 Junk Bros — Serving Ventura, California</p>
